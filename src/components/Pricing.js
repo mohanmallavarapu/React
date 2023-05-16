@@ -1,7 +1,8 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import Album from "./Album";
-import Posts from "./Posts";
+import Free from "./Free";
+import Pro from "./Pro";
+import Enterprise from "./Enterprise";
 
 function Pricing() {
   return (
@@ -16,16 +17,16 @@ function Pricing() {
       </div>
       <br />
       <div className="packages">
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          {Array.from(Array(3)).map((_, index) => (
-            <Grid xs={2} sm={4} md={4} key={index}>
-              <Album>xs=2</Album>
-            </Grid>
-          ))}
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid xs={4}>
+            <Free />
+          </Grid>
+          <Grid xs={4}>
+            <Pro />
+          </Grid>
+          <Grid xs={4}>
+            <Enterprise />
+          </Grid>
         </Grid>
       </div>
     </>
