@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TextField, Button } from "@mui/material";
+import { multiStepContext } from "./StepContext";
 
 function Payment() {
+  const { setStep, userData, setUserData } = useContext(multiStepContext);
   return (
     <div className="Shipping">
       <h3>Payment Method</h3>
@@ -26,7 +28,9 @@ function Payment() {
       <br />
       <div>
         <Button variant="text">Back</Button>
-        <Button variant="contained">Next</Button>
+        <Button variant="contained" onClick={() => setStep(3)}>
+          Next
+        </Button>
       </div>
     </div>
   );

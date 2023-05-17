@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { TextField, Button } from "@mui/material";
+import { multiStepContext } from "./StepContext";
 
 function ShippingAddress() {
+  const { setStep, userData, setUserData } = useContext(multiStepContext);
   return (
     <div className="Shipping">
       <h3>ShippingAddress</h3> <br />
@@ -49,7 +51,9 @@ function ShippingAddress() {
       <br />
       <br />
       <div>
-        <Button variant="contained">Next</Button>
+        <Button variant="contained" onClick={() => setStep(2)}>
+          Next
+        </Button>
       </div>
     </div>
   );
