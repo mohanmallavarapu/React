@@ -10,12 +10,17 @@ import {
 function Enterprise() {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 300 }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          className="package-header"
+        >
+          Enterprise
+        </Typography>
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Enterprise
-            </Typography>
             <Typography variant="body1" color="text.primary">
               <li>50 users included</li>
               <li>30 GB of storage</li>

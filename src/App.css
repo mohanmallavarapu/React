@@ -43,3 +43,24 @@
 .packages{
   text-align: center;
 }
+.package-header{
+  background-color: gainsboro;
+}
+.checkout-box{
+  margin:"auto";
+  margin-top:"50px";
+  justify-content:"center";
+  background-color:"Background";
+  border-radius:"12px";
+  box-shadow:"2";
+  width: 700px;
+  height: 500px;
+}
+
+.Shipping {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: 30px;
+}

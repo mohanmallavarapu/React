@@ -18,13 +18,14 @@ function Pricing() {
       <br />
       <div className="packages">
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid xs={4}>
+          <Grid xs={2} />
+          <Grid xs={3}>
             <Free />
           </Grid>
-          <Grid xs={4}>
+          <Grid xs={3}>
             <Pro />
           </Grid>
-          <Grid xs={4}>
+          <Grid xs={3}>
             <Enterprise />
           </Grid>
         </Grid>

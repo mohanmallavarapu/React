@@ -10,12 +10,17 @@ import {
 function Free() {
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 300 }}>
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          className="package-header"
+        >
+          Free
+        </Typography>
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Free
-            </Typography>
             <Typography variant="body1" color="text.primary">
               <li>10 users included</li>
               <li>2 GB of storage</li>

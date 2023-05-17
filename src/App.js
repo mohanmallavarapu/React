@@ -6,6 +6,7 @@ import Pricing from "./components/Pricing";
 import Checkout from "./components/Checkout";
 import Posts from "./components/Posts";
 import Album from "./components/Album";
+import StepContext from "./components/StepContext";
 
 function App() {
   return (
@@ -15,7 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Pricing />} />
         <Route path="pricing" element={<Pricing />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route
+          path="checkout"
+          element={
+            <StepContext>
+              <Checkout />
+            </StepContext>
+          }
+        />
         <Route path="posts" element={<Posts />} />
         <Route path="albums" element={<Album />} />
       </Routes>
