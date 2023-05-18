@@ -11,23 +11,50 @@ function Payment() {
       <div>
         <TextField
           required
-          id="fname"
+          id="cardname"
+          value={userData["cardname"]}
+          onChange={(e) =>
+            setUserData({ ...userData, cardname: e.target.value })
+          }
           label="Name on card"
           variant="standard"
         />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <TextField id="lname" label="Card number" variant="standard" />
+        <TextField
+          id="cardno"
+          value={userData["cardno"]}
+          onChange={(e) => setUserData({ ...userData, cardno: e.target.value })}
+          label="Card number"
+          variant="standard"
+        />
       </div>
       <br />
       <div>
-        <TextField required id="fname" label="Expiry date" variant="standard" />
+        <TextField
+          required
+          id="expirydt"
+          value={userData["expirydt"]}
+          onChange={(e) =>
+            setUserData({ ...userData, expirydt: e.target.value })
+          }
+          label="Expiry date"
+          variant="standard"
+        />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <TextField id="lname" label="CVV" variant="standard" />
+        <TextField
+          id="cvv"
+          value={userData["cvv"]}
+          onChange={(e) => setUserData({ ...userData, cvv: e.target.value })}
+          label="CVV"
+          variant="standard"
+        />
       </div>
       <br />
       <br />
       <div>
-        <Button variant="text">Back</Button>
+        <Button variant="text" onClick={() => setStep(1)}>
+          Back
+        </Button>
         <Button variant="contained" onClick={() => setStep(3)}>
           Next
         </Button>

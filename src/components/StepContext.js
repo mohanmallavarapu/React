@@ -6,6 +6,13 @@ const StepContext = () => {
   const [currentStep, setStep] = useState(1);
   const [userData, setUserData] = useState([]);
   const [finalData, setFinalData] = useState([]);
+
+  function submitData() {
+    console.log(userData);
+    setFinalData((finalData) => [...finalData, userData]);
+    setUserData();
+  }
+
   return (
     <div>
       <multiStepContext.Provider
@@ -16,6 +23,7 @@ const StepContext = () => {
           setUserData,
           finalData,
           setFinalData,
+          submitData,
         }}
       >
         <Checkout />
